@@ -1,0 +1,23 @@
+{
+  "name": "wdd331r_zengardenproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-86/WDD331R_ZenGardenProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T-86/WDD331R_ZenGardenProject/issues"
+  },
+  "homepage": "https://github.com/T-86/WDD331R_ZenGardenProject#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  },
+  "description": ""
+}

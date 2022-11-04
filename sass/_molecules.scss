@@ -1,1 +1,110 @@
-ECHO is on.
+@use "variables" as *;
+@use "atoms";
+
+
+
+
+@mixin set-Flex($direction: row, $wrap: wrap){
+    display: flex;
+    flex-flow: $direction $wrap;
+}
+
+
+
+
+header{
+ 
+     
+}
+
+
+
+.summary{
+
+    p{
+        @include atoms.set-text-style($fs-100);
+        color: $clr-white !important;
+        line-height: 1.5em;
+        padding-right: 15rem;
+        font-weight: $fw-300;
+
+        &:nth-of-type(1){
+            padding-top: 1.5rem;
+        }
+
+        &:nth-of-type(2){
+            padding-top: 1.5rem;
+        }
+        
+        
+
+    }
+
+    
+}
+
+.preamble{
+    display: none;
+
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: .75rem;
+
+    .explanation{
+        background: $clr-secondary-400;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        padding: 2rem;
+        
+        &::before{
+            content: url(../images/main_logo.jpg);
+            height: auto;
+            float: right;
+            
+            
+            
+        }
+
+        p:nth-of-type(){
+            
+        }
+
+       
+    }
+    
+    .participation{
+        display: block;
+        background: $clr-secondary-500;
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+    
+    .benefits{
+        background: $clr-primary-400;
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+    
+    .requirements{
+        background-color: $clr-neutral-300;
+        grid-column: 1/-1;
+        grid-row: 4/5;
+    }
+
+    .footer{
+        display: inline-block;
+        grid-column: 1/-1;
+        grid-row: 5/-1;
+
+    }
+    
+}
+
+
+
+
+

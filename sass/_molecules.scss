@@ -55,7 +55,7 @@ header{
     gap: .75rem;
 
     .explanation{
-        background: $clr-secondary-400;
+        background: $color5;
         grid-column: 1/-1;
         grid-row: 1/2;
         padding: 2rem;
@@ -78,19 +78,19 @@ header{
     
     .participation{
         display: block;
-        background: $clr-secondary-500;
+        background: $color5;
         grid-column: 1/-1;
         grid-row: 2/3;
     }
     
     .benefits{
-        background: $clr-primary-400;
+        background: $color5;
         grid-column: 1/-1;
         grid-row: 3/4;
     }
     
     .requirements{
-        background-color: $clr-neutral-300;
+        background-color: $color5;
         grid-column: 1/-1;
         grid-row: 4/5;
     }

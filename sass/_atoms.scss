@@ -3,7 +3,6 @@
 
 
 
-
 @mixin set-text-style($size: $fs-300, $font:$ff-primary, $color: $clr-black){
     font-size: $size;
     font-family: $font;
@@ -51,6 +50,7 @@ p{
 
 
 a{
+
     
 }
 

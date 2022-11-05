@@ -9,22 +9,12 @@
    
 }
 
-.intro{
-    // @include set-position(sticky, 0);
-    // background-color: $clr-primary;
-    background-color: $background;
-    background-attachment: fixed;
+@mixin set-background-image(){
     background-image: url(../images/background-header3.jpg);
+    background-attachment: fixed;
     background-blend-mode: multiply;
     background-size: cover;
-    opacity: 0.75;
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding-bottom: 5rem;
-    
-   
 }
-
 
 
 .page-wrapper{
@@ -39,6 +29,12 @@
         order: 1;
         grid-column: 1 / -1;
         grid-row: 1/2;
+        background-color: $background;
+        @include set-background-image();
+        opacity: 0.75;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        padding-bottom: 5rem;
         
     }
     
@@ -54,7 +50,9 @@
         order: 2;
         grid-column:2/-1;
         grid-row: 2/3;
-        background-color: $clr-gray;
+        background-color: $background;
+        @include set-background-image();
+        opacity: .75;
         display: block;
         position: sticky;
         top: 0;
@@ -64,8 +62,7 @@
 
         .wrapper{
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
+            @include molecules.set-Flex(column);
             justify-content: space-evenly;
             gap: 1.5rem;
             position: sticky;
@@ -93,8 +90,8 @@
                 }
 
                 ul{
-                    display: flex;
-                    flex-flow: column wrap;
+
+                    @include molecules.set-Flex(column);
                     justify-content: space-evenly;
                     list-style-type: none;
                     
@@ -115,8 +112,7 @@
             }
 
             .design-archives{
-                display: flex;
-                flex-direction: column;
+                @include molecules.set-Flex(column);
                 padding: 0 2rem;
 
                 .archives{
@@ -129,8 +125,7 @@
                 }
 
                 ul{
-                    display: flex;
-                    flex-flow: column wrap;
+                    @include molecules.set-Flex(column);
                     justify-content: space-evenly;
                     list-style-type: none;
 
@@ -150,8 +145,7 @@
             }
 
             .zen-resources{
-                display: flex;
-                flex-direction: column;
+                @include molecules.set-Flex(column);
                 padding: 0 2rem;
 
                 .resources{
@@ -165,44 +159,14 @@
                 }
 
                 ul{
-                    display: flex;
-                    flex-flow: column wrap;
+                    @include molecules.set-Flex(column);
                     justify-content: space-evenly;
                     list-style: none;
 
                     li {
                         padding: .25rem;
-
-                        // background: darken($clr-white, 75%);
-                        // border-left: 5px solid var(--gradient-color);
-                        // margin-bottom: 1px;
-                        // position: relative;
-                        // transition: .5s;
-
-                        // &:nth-child(1) {
-                        //     accent-color: $color1;
-                        //     background-color: $color1g;
-                        // }
-
-                        // &:nth-child(2) {
-                        //     accent-color: $color2;
-                        //     background-color: $color2g;
-                        // }
-
-                        // &:nth-child(3) {
-                        //     accent-color: $color3;
-                        //     background-color: $color3g;
-                        // }
-
-                        // &:nth-child(4) {
-                        //     accent-color: $color4;
-                        //     background-color: $color4g;
-                        // }
-
-                        // &:nth-child(5) {
-                        //     accent-color: $color5;
-                        //     background-color: $color5g;
-                        // }
+                        margin-bottom: 1px;
+                    
                         
                         a{
                             text-decoration: none;

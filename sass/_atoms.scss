@@ -1,1 +1,70 @@
+@use "variables" as * ;
+
+
+
+
+@mixin set-text-style($size: $fs-300, $font:$ff-primary, $color: $clr-black){
+    font-size: $size;
+    font-family: $font;
+    color: $color;
+}
+
+@mixin set-logo($loc){
+    &::#{$loc}{
+        display: block;
+        content: url(../images/second-logo.jpg);
+        position: absolute;
+        top: 0;
+        z-index: 10000;
+        }
+    }
+
+
+h1,h2,h3,p{
+    font-family:$ff-primary;
+    margin: 0;
+}
+
+h1{
+    @include set-text-style($fs-500);
+    color: $clr-white !important;
+    padding-top: 8rem;
+    font-weight: $fw-700;
+}
+
+h2{
+    @include set-text-style($fs-400);
+    color: $clr-white !important;
+    font-weight: $fw-300;
+}
+
+h3{
+    @include set-text-style($fs-400);
+
+}
+
+p{
+    @include set-text-style($fs-300, $clr-black);
+ 
+}
+
+
+a{
+
+    
+}
+
+a:hover{
+    color: $clr-white;
+
+}
+
+
+[role="banner"]:first-child{
+    @include set-logo(before);
+}
+
+
+
+
 

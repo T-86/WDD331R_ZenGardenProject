@@ -38,7 +38,7 @@ a:hover {
 
 [role=banner]:first-child::before {
   display: block;
-  content: url(../images/second-logo.jpg);
+  content: url(../images/zen_logo.png);
   position: absolute;
   top: 0;
   z-index: 10000;

@@ -12,7 +12,8 @@
 @mixin set-logo($loc){
     &::#{$loc}{
         display: block;
-        content: url(../images/zen_logo2.png);
+        content: url(../images/zen_logo1.png);
+        zoom: 13%;
         position: absolute;
         top: 0;
         z-index: 10000;
@@ -24,6 +25,8 @@ h1,h2,h3,p{
     font-family:$ff-primary;
     margin: 0;
 }
+
+
 
 h1{
     @include set-text-style($fs-500);
@@ -44,7 +47,7 @@ h3{
 }
 
 p{
-    @include set-text-style($fs-300, $clr-black);
+    @include set-text-style($fs-300, $clr-white);
 
 }
 

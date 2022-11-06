@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&family=Signika+Negative&display=swap');
+
 // added some new color
 $gap: 15px;
 $background: rgba(31, 92, 108, 1) ;
@@ -12,6 +14,12 @@ $color4g: #1EAE98;
 $color5: #C6EA8D;
 $color5g: #FE90AF;
 
+$chinese-red: rgba(156, 51, 29, 1);
+$fulvous: rgba(225, 137, 24, 1);
+$dark-red: rgba(137, 28, 15, 1);
+$desert-sand: rgba(229, 205, 183, 1);
+$champagne-pink: rgba(244, 222, 208, 1);
+
 // project selected colors
 $clr-primary: #1F5C6C;
 $clr-gray: #F0F0F0;
@@ -20,6 +28,8 @@ $clr-black: #000000;
 
 // font family
 $ff-primary: "Barlow Semi Condensed", sans-serif;
+$ff-secondary: 'Dynalight', cursive;
+$ff-primary2: 'Signika Negative', sans-serif;
 
 // font weight
 $fw-400: 500;

@@ -10,6 +10,14 @@
 }
 
 
+@mixin set-preamble-background(){
+    background-image: url(../images/autumn_background.jpg);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: transparent;
+    background-size: cover;
+}
+
 
 
 header{
@@ -20,6 +28,7 @@ header{
 
 
 .summary{
+    padding-bottom: 3rem;
 
     p{
         @include atoms.set-text-style($fs-100);
@@ -44,33 +53,70 @@ header{
 }
 
 .preamble{
-    display: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    @include set-preamble-background();
+    background-color: $fulvous;
+    border-radius: 10px;
+    padding: 1rem;
+    
+
+    h3:nth-of-type(1), p:nth-of-type(1), p:nth-of-type(2), p:nth-of-type(3){
+        color: $clr-white !important;
+        
+    }
+    
+
+    p:nth-of-type(1), p:nth-of-type(2), p:nth-of-type(3){
+        
+        // text-align: justify;
+       
+    }
+
+
 
 }
+    
+   
 
 .main{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     gap: .75rem;
 
     .explanation{
-        background: $color5;
+        @include set-preamble-background();
+        // background: $color5;
         grid-column: 1/-1;
         grid-row: 1/2;
         padding: 2rem;
+        border-radius: 10px;
         
         &::before{
-            content: url(../images/main_logo.jpg);
-            height: auto;
-            float: right;
-            
-            
+            content: url(../images/zen_logo2.png);
+            zoom: 26%;
+            padding-left: 10rem;
+            // height: auto;
+            float: right; 
             
         }
 
-        p:nth-of-type(){
+        h3:nth-of-type(1){
+           letter-spacing: .05rem;
+            padding-bottom: 1rem;
             
+        }
+
+        p:nth-of-type(1), p:nth-of-type(2){
+            line-height: 1.3;
+            text-align: justify;
+            // color: $clr-white !important;
+
         }
 
        
@@ -78,27 +124,101 @@ header{
     
     .participation{
         display: block;
-        background: $color5;
+        // background: $color5;
         grid-column: 1/-1;
         grid-row: 2/3;
+        @include set-preamble-background();
+        padding: 2rem;
+        border-radius: 10px;
+
+        &::before{
+            content: url(../images/zen_logo.png);
+            zoom: 26%;
+            padding-right: 10rem;
+            float: left; 
+            
+        }
+
+        h3:nth-of-type(1){
+            letter-spacing: .05rem;
+             padding-bottom: 1rem;
+             
+         }
+
+        
+        p:nth-of-type(1), p:nth-of-type(2){
+            line-height: 1.3;
+            text-align: justify;
+
+        }
     }
     
     .benefits{
-        background: $color5;
+        // background: $color5;
         grid-column: 1/-1;
         grid-row: 3/4;
+        padding: 2rem;
+        border-radius: 10px;
+        @include set-preamble-background();
+
+        &::before{
+            content: url(../images/zen_logo1.png);
+            zoom: 26%;
+            padding-left: 10rem;
+            float: right; 
+            
+        }
+
+        h3:nth-of-type(1){
+            letter-spacing: .05rem;
+             padding-bottom: 1rem;
+             
+         }
+
+        
+        p:nth-of-type(1){
+            line-height: 1.3;
+            text-align: justify;
+
+        }
     }
     
     .requirements{
-        background-color: $color5;
+        // background-color: $color5;
         grid-column: 1/-1;
         grid-row: 4/5;
+        @include set-preamble-background();
+        padding: 2rem;
+        border-radius: 10px;
+
+        &::before{
+            content: url(../images/zen_logo2.png);
+            zoom: 26%;
+            padding-right: 10rem;
+            padding-bottom: 5rem;
+            float: left; 
+            
+        }
+
+        h3:nth-of-type(1){
+            letter-spacing: .05rem;
+             padding-bottom: 1rem;
+             
+         }
+
+        p:nth-of-type(1), p:nth-of-type(2){
+            line-height: 1.3;
+            text-align: justify;
+
+        }
     }
 
     .footer{
         display: inline-block;
         grid-column: 1/-1;
         grid-row: 5/-1;
+        border-radius: 10px;
+        @include set-preamble-background();
 
     }
     

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dynalight&family=Signika+Negative&display=swap");
 h1, h2, h3, p {
   font-family: "Barlow Semi Condensed", sans-serif;
   margin: 0;
@@ -28,7 +29,7 @@ h3 {
 
 p {
   font-size: 1rem;
-  font-family: #000000;
+  font-family: #FBFBFB;
   color: #000000;
 }
 
@@ -38,12 +39,16 @@ a:hover {
 
 [role=banner]:first-child::before {
   display: block;
-  content: url(../images/zen_logo2.png);
+  content: url(../images/zen_logo1.png);
+  zoom: 13%;
   position: absolute;
   top: 0;
   z-index: 10000;
 }
 
+.summary {
+  padding-bottom: 3rem;
+}
 .summary p {
   font-size: 0.8325rem;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -61,46 +66,142 @@ a:hover {
 }
 
 .preamble {
-  display: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-image: url(../images/autumn_background.jpg);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: transparent;
+  background-size: cover;
+  background-color: rgb(225, 137, 24);
+  border-radius: 10px;
+  padding: 1rem;
 }
-
+.preamble h3:nth-of-type(1), .preamble p:nth-of-type(1), .preamble p:nth-of-type(2), .preamble p:nth-of-type(3) {
+  color: #FBFBFB !important;
+}
 .main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
   gap: 0.75rem;
 }
 .main .explanation {
-  background: #C6EA8D;
+  background-image: url(../images/autumn_background.jpg);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: transparent;
+  background-size: cover;
   grid-column: 1/-1;
   grid-row: 1/2;
   padding: 2rem;
+  border-radius: 10px;
 }
 .main .explanation::before {
-  content: url(../images/main_logo.jpg);
-  height: auto;
+  content: url(../images/zen_logo2.png);
+  zoom: 26%;
+  padding-left: 10rem;
   float: right;
+}
+.main .explanation h3:nth-of-type(1) {
+  letter-spacing: 0.05rem;
+  padding-bottom: 1rem;
+}
+.main .explanation p:nth-of-type(1), .main .explanation p:nth-of-type(2) {
+  line-height: 1.3;
+  text-align: justify;
 }
 .main .participation {
   display: block;
-  background: #C6EA8D;
   grid-column: 1/-1;
   grid-row: 2/3;
+  background-image: url(../images/autumn_background.jpg);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: transparent;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.main .participation::before {
+  content: url(../images/zen_logo.png);
+  zoom: 26%;
+  padding-right: 10rem;
+  float: left;
+}
+.main .participation h3:nth-of-type(1) {
+  letter-spacing: 0.05rem;
+  padding-bottom: 1rem;
+}
+.main .participation p:nth-of-type(1), .main .participation p:nth-of-type(2) {
+  line-height: 1.3;
+  text-align: justify;
 }
 .main .benefits {
-  background: #C6EA8D;
   grid-column: 1/-1;
   grid-row: 3/4;
+  padding: 2rem;
+  border-radius: 10px;
+  background-image: url(../images/autumn_background.jpg);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: transparent;
+  background-size: cover;
+}
+.main .benefits::before {
+  content: url(../images/zen_logo1.png);
+  zoom: 26%;
+  padding-left: 10rem;
+  float: right;
+}
+.main .benefits h3:nth-of-type(1) {
+  letter-spacing: 0.05rem;
+  padding-bottom: 1rem;
+}
+.main .benefits p:nth-of-type(1) {
+  line-height: 1.3;
+  text-align: justify;
 }
 .main .requirements {
-  background-color: #C6EA8D;
   grid-column: 1/-1;
   grid-row: 4/5;
+  background-image: url(../images/autumn_background.jpg);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: transparent;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.main .requirements::before {
+  content: url(../images/zen_logo2.png);
+  zoom: 26%;
+  padding-right: 10rem;
+  padding-bottom: 5rem;
+  float: left;
+}
+.main .requirements h3:nth-of-type(1) {
+  letter-spacing: 0.05rem;
+  padding-bottom: 1rem;
+}
+.main .requirements p:nth-of-type(1), .main .requirements p:nth-of-type(2) {
+  line-height: 1.3;
+  text-align: justify;
 }
 .main .footer {
   display: inline-block;
   grid-column: 1/-1;
   grid-row: 5/-1;
+  border-radius: 10px;
+  background-image: url(../images/autumn_background.jpg);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: transparent;
+  background-size: cover;
 }
 
 .page-wrapper {
@@ -113,27 +214,27 @@ a:hover {
   order: 1;
   grid-column: 1/-1;
   grid-row: 1/2;
-  background-color: rgb(31, 92, 108);
-  background-image: url(../images/background-header3.jpg);
+  background-color: rgb(244, 222, 208);
+  background-image: url(../images/autumn_background.jpg);
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-size: cover;
   opacity: 0.75;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  padding-bottom: 5rem;
+  padding: 0 2rem 5rem 2rem;
+  border-radius: 10px;
 }
 .page-wrapper .main {
   order: 3;
   grid-column: 1/2;
   grid-row: 2/3;
+  border-radius: 10px;
 }
 .page-wrapper .sidebar {
   order: 2;
   grid-column: 2/-1;
   grid-row: 2/3;
-  background-color: rgb(31, 92, 108);
-  background-image: url(../images/background-header3.jpg);
+  background-color: #FBFBFB;
+  background-image: url(../images/autumn_background.jpg);
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-size: cover;
@@ -141,6 +242,7 @@ a:hover {
   display: block;
   position: sticky;
   top: 0;
+  border-radius: 10px;
   z-index: 10;
 }
 .page-wrapper .sidebar .wrapper {

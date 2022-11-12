@@ -12,17 +12,15 @@
 @mixin set-logo($loc){
     &::#{$loc}{
         display: block;
-        content: url(../images/zen_logo1.png);
-        zoom: 13%;
-        // position: relative;
-        // top: 3vh;
-        // left: 5vw;
-        
+        content: url(../images/zen_logo.png);
+        zoom: 10%;
+      
+   
         }
     }
 
     @mixin set-background-image(){
-        background-image: url(../images/autumn_background5.jpg);
+        background-image: url(../images/autumn_background3.jpg);
         background-attachment: fixed;
         background-blend-mode: multiply;
         background-size: cover;
@@ -39,9 +37,9 @@ h1,h2,h3,p{
 
 
 h1{
-    @include set-text-style($fs-500);
+    @include set-text-style($fs-700);
     color: $clr-white !important;
-    padding-top: 8rem;
+    // padding-top: 8rem;
     font-weight: $fw-700;
 }
 
@@ -68,7 +66,8 @@ p{
 
 a{
 
- color: $dark-red;
+//  color: $dark-red;
+color: $clr-white;
 
 }
 
@@ -77,8 +76,8 @@ a:hover{
 }
 
 
-.intro:nth-of-type(1){
-    // @include set-logo(before);
+header{
+    @include set-logo(before);
   
 }
 

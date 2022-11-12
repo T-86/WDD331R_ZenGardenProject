@@ -4,7 +4,7 @@
 @use "organisms";
 
 
-*{
+*, ::after, ::before{
     box-sizing: border-box;
     margin: 0; 
     padding: 0;
@@ -12,13 +12,14 @@
 
 body{
     background-color: $champagne-pink;
-    @include atoms.set-background-image();
+    // @include atoms.set-background-image();
 }
 
 .page-wrapper{
     max-width: 100%;
-    margin: auto;
-    // @include organisms.set-background-image();
+    margin: 1em auto;
+
+   
 
 }
 

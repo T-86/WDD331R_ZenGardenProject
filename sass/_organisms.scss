@@ -21,14 +21,54 @@
 
 
     .intro{
+        box-sizing: border-box;
         order: 1;
         grid-column: 1 / -1;
         grid-row: 1/2;
-        background-color: $champagne-pink;
+        // background-color: $fulvous;
+        background-color: $desert-sand;
         @include atoms.set-background-image();
         // opacity: .75;
         padding: 0 2rem 3rem 2rem;
         border-radius: 10px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // align-items: baseline;
+        // align-content: center;
+
+        header{
+            // width: fit-content;
+            // height: 250px;
+            // padding: 1rem;
+          
+
+            &:nth-child(1){
+                // float: left;
+
+            }
+            h1, h2{
+                // display: inline-block;
+                // text-align: center;
+                // float: right;
+                // margin-left: 30rem;
+              
+
+            }
+        }
+
+        &:not(.preamble, .summary){
+            
+        }
+
+        // &:nth-child(1){
+        //     padding-top: 5rem;
+            
+        // }
+
+        &:nth-child(2){
+            
+        }
        
     }
 
@@ -46,7 +86,7 @@
         order: 2;
         grid-column:2/-1;
         grid-row: 2/3;
-        background-color: $desert-sand;
+        background-color: $dark-red;
         @include atoms.set-background-image();
         // opacity: .75;
         position: sticky;

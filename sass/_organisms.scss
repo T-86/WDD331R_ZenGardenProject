@@ -9,12 +9,7 @@
 
 }
 
-@mixin set-background-image(){
-    background-image: url(../images/autumn_background.jpg);
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-    background-size: cover;
-}
+
 
 
 .page-wrapper{
@@ -26,14 +21,55 @@
 
 
     .intro{
+        box-sizing: border-box;
         order: 1;
         grid-column: 1 / -1;
         grid-row: 1/2;
-        background-color: $champagne-pink;
-        @include set-background-image();
-        opacity: 0.75;
-        padding: 0 2rem 5rem 2rem;
+        // background-color: $fulvous;
+        background-color: $desert-sand;
+        @include atoms.set-background-image();
+        // opacity: .75;
+        padding: 0 2rem 3rem 2rem;
         border-radius: 10px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // align-items: baseline;
+        // align-content: center;
+
+        header{
+            // width: fit-content;
+            // height: 250px;
+            // padding: 1rem;
+          
+
+            &:nth-child(1){
+                // float: left;
+
+            }
+            h1, h2{
+                // display: inline-block;
+                // text-align: center;
+                // float: right;
+                // margin-left: 30rem;
+              
+
+            }
+        }
+
+        &:not(.preamble, .summary){
+            
+        }
+
+        // &:nth-child(1){
+        //     padding-top: 5rem;
+            
+        // }
+
+        &:nth-child(2){
+            
+        }
+       
     }
 
     .main{
@@ -41,7 +77,8 @@
         grid-column: 1/ 2;
         grid-row: 2/3;
         border-radius: 10px;
-
+        // background-color: $desert-sand;
+        // @include atoms.set-background-image();
 
     }
 
@@ -49,12 +86,10 @@
         order: 2;
         grid-column:2/-1;
         grid-row: 2/3;
-        background-color: $clr-white;
-        @include set-background-image();
-        opacity: .75;
-        display: block;
+        background-color: $dark-red;
+        @include atoms.set-background-image();
+        // opacity: .75;
         position: sticky;
-        top: 0;
         border-radius: 10px;
         z-index: 10;
 
@@ -70,8 +105,7 @@
             z-index: 10;
 
             .design-selection{
-                display: flex;
-                flex-direction: column;
+                @include molecules.set-Flex(column);
                 padding: 0 2rem;
 
 

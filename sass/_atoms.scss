@@ -12,12 +12,20 @@
 @mixin set-logo($loc){
     &::#{$loc}{
         display: block;
-        content: url(../images/zen_logo1.png);
-        zoom: 13%;
-        position: absolute;
-        top: 0;
-        z-index: 10000;
+        content: url(../images/zen_logo.png);
+        zoom: 10%;
+      
+   
         }
+    }
+
+    @mixin set-background-image(){
+        background-image: url(../images/autumn_background3.jpg);
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-size: cover;
+        // opacity: .75;
+        z-index: -1;
     }
 
 
@@ -29,42 +37,48 @@ h1,h2,h3,p{
 
 
 h1{
-    @include set-text-style($fs-500);
+    @include set-text-style($fs-700);
     color: $clr-white !important;
-    padding-top: 8rem;
+    // padding-top: 8rem;
     font-weight: $fw-700;
 }
 
 h2{
-    @include set-text-style($fs-400);
-    color: $clr-white !important;
-    font-weight: $fw-300;
+    @include set-text-style($fs-400, $ff-new1);
+    color: $dark-red !important;
+    font-weight: $fw-700;
 }
 
 h3{
-    @include set-text-style($fs-400);
+    @include set-text-style($fs-500, $ff-secondary2);
+    color: $champagne-pink !important;
+    // font-weight: $fw-400;
+    z-index: 1000;
 
 }
 
 p{
-    @include set-text-style($fs-300, $clr-white);
-
+    @include set-text-style($fs-300, $ff-new1);
+    color: $champagne-pink !important;
+    z-index: 1000;
 }
 
 
 a{
 
+//  color: $dark-red;
+color: $clr-white;
 
 }
 
 a:hover{
-    color: $clr-white;
-
+    color: $fulvous;
 }
 
 
-[role="banner"]:first-child{
+header{
     @include set-logo(before);
+  
 }
 
 

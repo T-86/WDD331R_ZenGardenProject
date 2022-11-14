@@ -208,7 +208,7 @@ header h1, header h2 {
   display: block;
   width: 25vw;
   height: 45vh;
-  background-image: url(../images/zen_logo.png);
+  background-image: url(../images/zen_about.png);
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -246,7 +246,7 @@ header h1, header h2 {
   display: block;
   width: 25vw;
   height: 45vh;
-  background-image: url(../images/zen_logo.png);
+  background-image: url(../images/zen_participation.png);
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -283,7 +283,7 @@ header h1, header h2 {
   display: block;
   width: 25vw;
   height: 45vh;
-  background-image: url(../images/zen_logo.png);
+  background-image: url(../images/zen_benefits.png);
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -320,7 +320,7 @@ header h1, header h2 {
   display: block;
   width: 25vw;
   height: 45vh;
-  background-image: url(../images/zen_logo.png);
+  background-image: url(../images/zen_requirements.png);
   background-size: contain;
   -webkit-background-size: contain;
   -moz-background-size: contain;

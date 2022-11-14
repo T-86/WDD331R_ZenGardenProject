@@ -10,17 +10,20 @@
     padding: 0;
 }
 
+html{
+    font-size: 100%;
+}
+
 body{
     background-color: $champagne-pink;
     // @include atoms.set-background-image();
 }
 
 .page-wrapper{
-    max-width: 100%;
-    margin: 1em auto;
+    max-width: 90%;
+    margin: .5em auto;
 
    
-
 }
 
 

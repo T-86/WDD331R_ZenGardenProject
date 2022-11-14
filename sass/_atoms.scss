@@ -1,33 +1,56 @@
 @use "variables" as * ;
 
 
-
-
 @mixin set-text-style($size: $fs-300, $font:$ff-primary, $color: $clr-black){
     font-size: $size;
     font-family: $font;
     color: $color;
 }
 
-@mixin set-logo($loc){
+@mixin set-footer-logo-svg($url){
+    display:block;
+    background-image: $url;
+    background-size: contain;
+    background-repeat: no-repeat;            
+    max-width: 100%;
+    width:40px;
+    height:40px;
+    text-indent:-999px;
+    text-align:left;
+    overflow:hidden;
+            
+}
+
+@mixin set-image($loc, $image-url, $width, $height, $float:none, $margin-value: 0rem)
+{
     &::#{$loc}{
+        content: "";
         display: block;
-        content: url(../images/zen_logo.png);
-        zoom: 10%;
-      
-   
+        width: $width;
+        height: $height;
+        background-image: $image-url;
+        background-size: contain;
+        -webkit-background-size:contain;
+        -moz-background-size:contain;
+        -o-background-size:contain;
+        background-repeat: no-repeat;
+        float: $float;
+        margin: $margin-value;
+        z-index: 10;
+
         }
     }
 
-    @mixin set-background-image(){
-        background-image: url(../images/autumn_background3.jpg);
-        background-attachment: fixed;
-        background-blend-mode: multiply;
-        background-size: cover;
-        // opacity: .75;
-        z-index: -1;
+@mixin set-background-image(){
+    background-image: url(../images/autumn_background3.jpg);
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+        
     }
-
 
 h1,h2,h3,p{
     font-family:$ff-primary;
@@ -35,11 +58,9 @@ h1,h2,h3,p{
 }
 
 
-
 h1{
-    @include set-text-style($fs-700);
+    @include set-text-style($fs-500);
     color: $clr-white !important;
-    // padding-top: 8rem;
     font-weight: $fw-700;
 }
 
@@ -51,35 +72,52 @@ h2{
 
 h3{
     @include set-text-style($fs-500, $ff-secondary2);
-    color: $champagne-pink !important;
-    // font-weight: $fw-400;
-    z-index: 1000;
-
+    color: $dark-red !important;
 }
 
 p{
-    @include set-text-style($fs-300, $ff-new1);
-    color: $champagne-pink !important;
-    z-index: 1000;
+    @include set-text-style($fs-200, $ff-new1);
+    color: $clr-black!important;
 }
 
 
 a{
-
-//  color: $dark-red;
-color: $clr-white;
-
+    @include set-text-style($fs-200, $ff-new1);
+    color: $dark-red;
 }
 
 a:hover{
-    color: $fulvous;
+    color: $clr-white;
 }
 
 
-header{
-    @include set-logo(before);
-  
+[role="banner"]{
+    @include set-image(before, url(../images/zen_logo.png), 8vw, 15vh);
 }
 
 
+footer{
+
+    .zen-validate-html{
+        @include set-footer-logo-svg(url(../svg/html5.svg));
+    }
+
+    .zen-validate-css{
+        @include set-footer-logo-svg(url(../svg/css3.svg));
+
+    }
+
+    .zen-license{
+        @include set-footer-logo-svg(url(../svg/closed-captioning-solid.svg));
+    }
+
+    .zen-accessibility{
+        @include set-footer-logo-svg(url(../svg/universal-access.svg));
+    }
+
+    .zen-github{
+        @include set-footer-logo-svg(url(../svg/square-github.svg));
+    }
+
+}
 

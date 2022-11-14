@@ -96,7 +96,7 @@ header{
         grid-row: 1/2;
         padding: 2rem;
         border-radius: 10px;
-        @include atoms.set-image(before, url(../images/zen_logo.png), 25vw, 45vh, right, 1rem);
+        @include atoms.set-image(before, url(../images/zen_about.png), 25vw, 45vh, right, 1rem);
      
 
         h3:nth-of-type(1){
@@ -120,7 +120,7 @@ header{
         grid-row: 2/3;
         background-color: $desert-sand;
         @include atoms.set-background-image();
-        @include atoms.set-image(before, url(../images/zen_logo.png), 25vw, 45vh, left, 1rem);
+        @include atoms.set-image(before, url(../images/zen_participation.png), 25vw, 45vh, left, 1rem);
         padding: 2rem;
         border-radius: 10px;
         
@@ -145,7 +145,7 @@ header{
         border-radius: 10px;
         background-color: $desert-sand;
         @include atoms.set-background-image();
-        @include atoms.set-image(before, url(../images/zen_logo.png), 25vw, 45vh, right, 1rem);
+        @include atoms.set-image(before, url(../images/zen_benefits.png), 25vw, 45vh, right, 1rem);
 
         h3:nth-of-type(1){
             letter-spacing: .05rem;
@@ -166,7 +166,7 @@ header{
         grid-row: 4/5;
         background-color: $desert-sand;
         @include atoms.set-background-image();
-        @include atoms.set-image(before,url(../images/zen_logo.png), 25vw, 45vh, left, 1rem);
+        @include atoms.set-image(before,url(../images/zen_requirements.png), 25vw, 45vh, left, 1rem);
         padding: 2rem;
         border-radius: 10px;
 

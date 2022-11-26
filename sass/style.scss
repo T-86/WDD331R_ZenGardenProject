@@ -1,7 +1,9 @@
+@use "mediaQueries";
 @use "variables" as *;
 @use "atoms" ;
 @use "molecules";
 @use "organisms";
+
 
 
 *, ::after, ::before{
@@ -11,20 +13,166 @@
 }
 
 html{
-    font-size: 100%;
-}
+    box-sizing: border-box;
+    font-size: 62.5%;
 
-body{
-    background-color: $champagne-pink;
-    // @include atoms.set-background-image();
-}
 
-.page-wrapper{
-    max-width: 90%;
-    margin: .5em auto;
 
-   
-}
+    @include mediaQueries.responsive(tab-port){
+        font-size: .55rem;
+        
+        
+    };
 
+    @include mediaQueries.responsive(phone){
+        .page-wrapper{         
+
+            .intro{
+                             
+                header{
+                    @include atoms.set-logo(before, url(../images/zen_logo.png), 11vw, 25vh);
+                    
+                    h1{
+                       font-size: $fs-500;
+               
+                    }
+
+                    h2{
+                        
+                        margin-top: .5rem;
+                        font-size: $fs-300;
+                    }
+                        
+                    
+                               
+                }
+                .summary{
+                    margin: 0 2rem;
+                    padding: 1rem 1rem;
+                    
+                    p{
+                        @include atoms.set-text-style($fs-100, $ff-new1);   
+                    }
+
+                }
+
+                .preamble{
+                    @include molecules.set-Flex(column, wrap);
+
+                    h3:nth-of-type(1){
+                        font-size: $fs-500 !important;
+                    }
+        
+                    p:nth-of-type(1), p:nth-of-type(2), p:nth-of-type(3){
+                        font-size: $fs-200 !important;   
+                    }
+    
+                }
+            }
+        
+            .main{
+                @include molecules.order(3);
+                grid-column: 1/ -1;
+                grid-row: 3/-1;
+        
+            }
+        
+            .sidebar{
+                grid-column:1/-1;
+                background-color: $desert-sand;
+                box-shadow: rgba(26, 11, 11, 0.3) 0px 3px 8px;
+                border-radius: 10px;
+                margin: 2rem;
+
+                .wrapper{
+                    @include molecules.set-Flex(row, nowrap);
+                }
+                
+            }
+
+        }
+    }
+
+    @include mediaQueries.responsive(iphone){
+        font-size: .4rem;
+        .sidebar{
+            box-shadow: rgba(26, 11, 11, 0.3) 0px 3px 8px;
+            border-radius: 10px;
+            margin: 2rem;    
+        }
+
+        footer{
+            background-color: $desert-sand !important; 
+            // padding: 2rem 0 0 0;
+
+            a{
+                padding: 2rem 1rem;
+            }
+        }
+
+    }
+
+    @include mediaQueries.responsive(iphone1){
+        font-size: .35rem;
+        
+       
+
+        .page-wrapper{
+            max-width: 100%;
+        }
+
+        .sidebar{
+            box-shadow: rgba(26, 11, 11, 0.3) 0px 3px 8px;
+            border-radius: 10px;
+            margin: 2rem;    
+        }
+
+        footer{
+            background-color: $desert-sand; 
+            // padding: 2rem 0 0 0;
+        }
+
+    }
+
+    @include mediaQueries.responsive(iphone2){
+        .sidebar{
+
+            .wrapper{
+                @include molecules.set-Flex(row, wrap);
+            }
+        }
+
+        .main{
+            box-shadow: rgba(26, 11, 11, 0.3) 0px 3px 8px;
+            border-radius: 10px;
+            margin: 2rem;  
+        }
+
+        footer{
+            background-color: $desert-sand; 
+            max-height: 6vh;
+            // padding: 2rem 0 0 0;
+        }
+
+        
+    }
 
   
+
+
+
+body{
+
+    background-color: $champagne-pink;
+    &:not(.page-wrapper){
+            font-size: 0;
+    }
+
+    .page-wrapper{
+        max-width: 90%;
+        margin: .5em auto;
+    }
+}
+
+
+}

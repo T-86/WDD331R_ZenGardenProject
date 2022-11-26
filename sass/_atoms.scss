@@ -12,19 +12,42 @@
     background-image: $url;
     background-size: contain;
     background-repeat: no-repeat;            
-    max-width: 100%;
-    width:40px;
-    height:40px;
+    // max-width: 100%;
+    // max-height: 100%;
+    width:4vw;
+    height:4vh;
     text-indent:-999px;
     text-align:left;
     overflow:hidden;
             
 }
 
-@mixin set-image($loc, $image-url, $width, $height, $float:none, $margin-value: 0rem)
+@mixin set-logo($loc, $image-url, $width, $height)
 {
     &::#{$loc}{
         content: "";
+        display: block;
+        width: $width;
+        height: $height;
+        background-image: $image-url;
+        background-attachment:local;
+        background-size:contain;
+        -webkit-background-size:contain;
+        -moz-background-size:contain;
+        -o-background-size:contain;
+        background-repeat: no-repeat;
+        z-index: 100;
+
+        }
+    }
+    
+
+
+@mixin set-image($loc, $image-url, $width, $height, $float:none, $shape:none)
+{
+    &::#{$loc}{
+        content: "";
+        border: 1px solid blue;
         display: block;
         width: $width;
         height: $height;
@@ -35,7 +58,7 @@
         -o-background-size:contain;
         background-repeat: no-repeat;
         float: $float;
-        margin: $margin-value;
+        shape-outside: $shape;
         z-index: 10;
 
         }
@@ -59,13 +82,13 @@ h1,h2,h3,p{
 
 
 h1{
-    @include set-text-style($fs-500);
+    @include set-text-style($fs-700);
     color: $clr-white !important;
     font-weight: $fw-700;
 }
 
 h2{
-    @include set-text-style($fs-400, $ff-new1);
+    @include set-text-style($fs-303, $ff-new1);
     color: $dark-red !important;
     font-weight: $fw-700;
 }
@@ -91,9 +114,10 @@ a:hover{
 }
 
 
-[role="banner"]{
-    @include set-image(before, url(../images/zen_logo.png), 8vw, 15vh);
+header{
+    @include set-logo(before, url(../images/zen_logo.png), 10vw,17vh);
 }
+
 
 
 footer{

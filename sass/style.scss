@@ -59,11 +59,11 @@ html{
                 .preamble{
                     @include molecules.set-Flex(column, wrap);
 
-                    h3:nth-of-type(1){
+                    &:nth-child(1){
                         font-size: $fs-500 !important;
                     }
         
-                    p:nth-of-type(1), p:nth-of-type(2), p:nth-of-type(3){
+                    &:nth-child(2), &:nth-child(3), p:nth-child(4){
                         font-size: $fs-200 !important;   
                     }
     
@@ -104,7 +104,7 @@ html{
         footer{
             background-color: $desert-sand !important; 
             &>*{
-                margin-top: 2rem;
+                margin-top: 1rem;
 
             }
            
